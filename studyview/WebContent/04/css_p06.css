@@ -1,0 +1,25 @@
+@charset "UTF-8";
+:root{
+	--color-main:#d7ecff;
+	--color-Main:black;
+	--ff-size:16px;
+	--ff-name:"Noto Sans KR"
+}
+*, *::berofe, *::after{
+	box-sizing : content-box; /* 박스 사이즈를 결정하는 방법 */
+	/* content-box : 기본설정 사이즈로 결정, padding-box : 패딩과 보더의 영향에 맞춰서 사이즈 결정 */
+}
+div{
+	color:var(--color-Main, lime);
+}
+p{
+	background: var(--color-main);
+	margin: 12px 12px 12px;
+	     /* top  right,left  bottom */
+	padding: 3px 3px 3px 3px;
+	border: 3px dashed black;
+	border-top: 1px dashed black;
+	border-right: 3px dashed black;
+	border-bottom: 5px dashed black;
+	border-left: 7px dashed black;
+}
