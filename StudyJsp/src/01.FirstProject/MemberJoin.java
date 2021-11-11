@@ -1,4 +1,5 @@
 
+
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
@@ -13,6 +14,27 @@ import com.hanul.member.MemberDTO;
 /**
  * Servlet implementation class MemberJoin
  */
+<<<<<<< HEAD
+@WebServlet("/memberJoin.do")
+public class MemberJoin extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public MemberJoin() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void service(HttpServletRequest request, HttpServletResponse response) 
+		throws ServletException, IOException {
+		//① 클라이언트의 요청을 받는다 : 매개변수를 가져온다 ▶ HttpServletRequest
+=======
+@WebServlet("/MemberJoin.do")
 @WebServlet("/memberJoin.do")
 public class MemberJoin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -32,6 +54,7 @@ public class MemberJoin extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// ① 클라이언트의 요청을 받는다 : 매개변수를 가져온다. ▶ HttpServletRequest
+>>>>>>> JHU
 		request.setCharacterEncoding("utf-8");
 		String name = request.getParameter("name");
 		String id = request.getParameter("id");
@@ -39,15 +62,13 @@ public class MemberJoin extends HttpServlet {
 		int age = Integer.parseInt(request.getParameter("age"));
 		String addr = request.getParameter("addr");
 		
+<<<<<<< HEAD
 		System.out.println("이름 : " + name);
 		System.out.println("아이디 : " + id);
-		System.out.println("비빌번호 : " + pw);
+		System.out.println("비밀번호 : " + pw);
 		System.out.println("나이 : " + age);
 		System.out.println("주소 : " + addr);
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 545d984a311598ec8f7bb5033ae371c966b297d8
 		
 		//② 비지니스 로직	: DAO를 통해서 DB와 연동하고 결과를 리턴받는 작업
 		MemberDTO dto = new MemberDTO(name, id, pw, age, addr);
@@ -57,31 +78,24 @@ public class MemberJoin extends HttpServlet {
 		request.setAttribute("dto", dto);	//연결객체 생성
 		RequestDispatcher rd = request.getRequestDispatcher("result.jsp");	//페이지 호출
 		rd.forward(request, response);	//페이지 전환
-<<<<<<< HEAD
-=======
 =======
 =======
 >>>>>>> JHU
 >>>>>>> 4c50310cbae7f9cb7cb501c74b042d057d0b9047
->>>>>>> 545d984a311598ec8f7bb5033ae371c966b297d8
 	}
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
