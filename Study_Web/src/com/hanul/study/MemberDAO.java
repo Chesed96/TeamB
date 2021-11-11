@@ -50,7 +50,8 @@ public class MemberDAO {			//DB와 연동
 			ps.setString(2, dto.getId()); 
 			ps.setString(3, dto.getPw()); 
 			ps.setInt(4, dto.getAge()); 
-			ps.setString(5, dto.getTel()); 
+			ps.setString(5, dto.getAddr()); 
+			ps.setString(6, dto.getTel());
 			succ = ps.executeUpdate(); //SQL 문장을 실행
 			
 		} catch (Exception e) {
