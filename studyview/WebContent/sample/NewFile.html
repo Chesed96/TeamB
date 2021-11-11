@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+a{
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+}
+
+ul {
+	overflow: hidden;
+		
+	margin: 0px auto;	/* 가운데 정렬 , 반드시 width가 존재해야 함. */
+	display: table;	/* width르 모르는 상태에서는 display: table */
+
+/* 	display: flex;
+	justify-content: center; */
+}
+
+ul li{
+	float: left;
+	list-style: none;
+}
+
+ul li a {
+	display : block;  /* 기능 1 : inline형식의 태그를 block형식의 태그로 변환, 
+						 기능 2 : 숨겨놓은 태그를 보여주는 태그로 변환 */
+	padding: 10px 30px; /* padding을 주면 밑에 4가지 작업을 하지 않아도 같은 효과 */
+	/* width: 150px;
+	height: 50px;
+	line-height: 50px;	 heigth와 line-height 동시에 같은 값을 주면 세로 가운데 정렬 
+	text-align : center; */
+	border: 1px solid black;
+}
+/* 
+inline형식 태그 : span, label , img, a, input, 
+	글자형식태그(b, i, small, sub, sup, ins, del) 
+	← 옆으로 나란히 정렬, 크기를 가질 수 없음(여백 등 지정 불가능).
+block형식 태그 : div, h1~h6, ,p, li. table, form 등
+	→ 블럭처럼 차곡차곡 쌓여짐, 크기를 가질 수 있음(여백 등 지정 가능).
+ */
+ 
+/*  	ul li:nth-child(2n+1) a{ */		/* li 중에서 홀수번째 아래에 있는 앵커 태그 */
+ 	ul li:nth-child(odd) a{
+ 		background-color: green;
+ 	}
+ 	
+/*  	ul li:nth-child(2n) a{ */		/* li 중에서 짝수번째 아래에 있는 앵커 태그 */
+ 	ul li:nth-child(even) a{
+ 		background-color: red;
+ 		/* border-left: 0px;
+ 		border-right: opx; */ /* ↓ 같은 방법 */
+ 		margin-left: -1px;
+ 		margin-right: -1px;
+ 	}
+ 	ul li:first-child a{
+ 		border-radius: 20px 0px 0px 20px;
+ 	}
+ 	
+ 	ul li:last-child a{
+ 		border-radius: 0px 20px 20px 0px;
+ 	}
+ 
+</style>
+</head>
+<body>
+	<ul>
+		<li><a href="htttp://www.naver.com">네이버</a></li>
+		<li><a href="htttp://www.google.com">구글</a></li>
+		<li><a href="htttp://www.youtube.com">유튜브</a></li>
+		<li><a href="htttp://www.daum.net">다음</a></li>
+		<li><a href="htttp://news.naver.com">네이버뉴스</a></li>
+		<li><a href="htttp://www.facebook.com">페이스북</a></li>
+		<li><a href="htttp://www.twitter.com">트위터</a></li>
+	</ul>
+</body>
+</html>

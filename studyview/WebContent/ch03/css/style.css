@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* 문서를 구역별로 나눌 때*/
+
+.wrapper{
+	width: 80%;
+	margin: 0 auto;
+}
+
+#header{
+	background: gold; /* 배경색 */
+	padding: 20px 0; /* 상,하 여백 20px */
+	text-indent: 15px; /* 안으로 들여쓰기 15pz */
+}
+#header h1 {
+	font-size: 2rem; /* 글자크기 - 기본값 2배 */
+	border-left: 5px solid black; /* 왼쪽 테두리 */
+	padding-left: 8px; /* 왼쪽 (안) 여백 */
+}
+#header P{
+	margin: 15px; /* (바깥) 여백 */	
+}
+
+#main{
+	border-left: 1px dashed #333;
+	border-right: 1px dashed #333; /* 사방에 다 선을 넣고 싶으면  'border: ' 라고만 하면 됨.*/
+	padding: 20px;
+	margin: 20px;
+}
