@@ -1,0 +1,323 @@
+@charset "UTF-8";
+
+/* 01. 공통(PC,MOBILE)요소 정의 */
+body {
+	font : 14px/1.5 "Noto Sans KR", sans-serif;
+	font-weight: 400;
+	color: #666;
+}
+
+.blind {
+	display: none;
+}
+
+a,a:link {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* 02. 각 부분 디자인 요소 */
+/* 02-1. header영역 */
+.header-main {
+	max-width: 1000px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	width: 1000px;
+	padding: 25px 0;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1000;
+}
+
+.header-sub {
+	background: url("../images/visual_bg.jpg") no-repeat center 0 ;
+	min-height: 950px;
+	position: relative;
+}
+
+.logo-wrap {
+	max-width: 1000px;
+	display: flex;
+	justify-content: space-between;
+	width: 1000px;
+	margin: 40px auto;
+	align-items: center;
+}
+
+.header-slogan {
+	display:flex;
+	align-items: flex-start;
+	position: absolute;
+	left: 50%;
+	transform: translate(-55%, -140%);
+	bottom: 0;	
+}
+
+
+/* 02-2. section영역 */
+
+ .systems-wrap {
+	background: url("../images/system_bg.jpg") no-repeat center 0 ;
+	position: relative;
+	max-height: 705px;
+	margin: 0 auto;
+}
+
+.systems-title-wrap {
+	max-width: 1000px;
+	margin: 0 auto;
+	text-align: center;	
+	padding: 40px 0 0 0 ;
+}
+.systems-title-wrap p {
+	max-width:1000px;
+	width: 350px;
+	height: 35px;
+	margin: 0px auto;
+	font-size: 20px;
+	font-weight: 500;
+	text-align: center;
+	color:#fff;
+	background-color: #1e598c;
+}
+.systems-title {
+	padding: 0px 0 10px 0px;
+	text-align: center;
+	font-size: 30px;
+	font-weight: 500;
+	color: #1e598c;
+	border-bottom:  solid 1px;
+	border-bottom-color: #1e598c;
+}
+.systems-list-wrap {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+.systems-list {
+	display: flex;
+	justify-content: space-evenly;
+	
+}
+.systems-list li{
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+	border-radius: 50%;
+	position: relative;
+}
+.systems-list-over {
+	display:none;
+	position: absolute;
+	top: 0;
+	left:0;
+	opacity: 0.5;
+}
+.systems-list li:hover systems-list-over {
+	display: block;
+}
+
+
+.product-wrap {
+	background: url("../images/product_bg.gif") no-repeat center 0;
+	position: relative;
+	max-height: 705px;
+	max-width:1000px;
+	margin: 0 auto;
+}
+.product-wrap p {
+	font-size: 36px;
+	font-weight: 700;
+	text-align: center;
+	color:#000;
+}
+.product-wrap p > span {
+	font-size: 36px;
+	font-weight: 700;
+	text-align: center;
+	color:#ed480e;
+}
+.product-title {
+	padding : 50px 0px 20px 0px;
+	text-align: center;
+	font-size: 30px;
+	font-weight: 500;
+	color: #1e598c;
+}
+.product-list-wrap {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 35px 0;
+	display: flex;
+	justify-content: space-evenly;
+}
+.product-sub{
+	width: 150px;
+	margin: 0 auto;
+}
+.product-sub > p {
+	max-width: 1000px;
+	margin: 0px auto;
+	padding: 10px;
+	font-size: 16px;
+	color: #000;
+	border: solid 1px;
+	border-radius: 30px;
+}
+.product-sub p:hover {
+	color: #fff;
+	background-color: #000;
+}
+
+
+.company-wrap {
+	background: url("../images/company_bg.jpg") no-repeat center 0;
+	margin: 60px auto 0px;
+	position:relative;
+	min-height: 420px;
+
+}
+.company-produce {
+	width: 1000px;
+	margin: 0 auto;
+}
+.company-produce p:nth-child(1) {
+	font-size: 20px;
+	font-weight: 500;
+	color: #193f5c;
+}
+.company-produce p:nth-child(2) {
+	font-size: 30px;
+	font-weight: 500;
+	color: #193f5c;
+}
+.company-produce p:nth-child(3) {
+	font-size: 30px;
+	font-weight: 300;
+	color: #193f5c;
+}
+.company-list-wrap {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 35px 0;
+	display: flex;
+	justify-content: space-evenly;
+}
+.company-list {
+	display:flex;
+	align-items: center;
+	position: absolute;
+	left: 50%;
+	bottom: -1%;	
+
+}
+
+
+
+/* 02-3. aside영역 */
+.aside-wrap {
+	max-width: 1000px;
+	margin: 0px auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.cs-center {
+	display: flex;
+	color: #e86708;
+	font-size: 20px;
+	font-weight: 700;
+}
+.with-icons-phone {
+	padding: 0 0 0 35px;
+	margin: 0 10px 0 0;
+	background: url("../images/icon_call.png") no-repeat left center;
+	
+}
+
+
+/* 02-4. footer영역 */
+footer {
+	text-align: center;
+}
+.footer-wrap {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.contact {
+	font-size: 13px;
+	color: #666;
+	margin: 20px auto;
+}
+.owner-info {
+	font-size: 11px;
+	color: #999;
+	margin: 20px auto;
+	text-transform: uppercase;
+}
+
+/* 02-5. vp영역 */
+
+.vp-wrap {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1001;
+	background: rgba(225,225,225,0.8);
+}
+
+.vp-contenct{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.vp-btn-close {
+	max-width: 1000px;
+	margin: 40px auto;
+	display: flex;
+	align-items: center;
+	position: relative;
+	left: 50%;
+}
+.vp-logo {
+	max-width: 1000px;
+	margin: 30px auto;
+	display: flex;
+	align-items: center;
+	position: absolute;
+	left: 50%;
+}
+.vp-join {
+	max-width: 1000px;
+	margin: 0 auto;
+	left: 50%;
+	align-items: center;
+}
+.vp-join p {
+	font-size: 13px;
+	color: #ccc;
+	border-bottom: solid 1px;
+	border-color: #999;
+}
+.vp-gnb {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.vp-gnb-list {
+	font-size: 20px;
+	color: #fff;
+	font-weight: 500;
+	border: solid 1px;
+	border-color: #ccc;
+}
+
+
+
+
+
