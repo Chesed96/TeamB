@@ -5,7 +5,13 @@ import java.io.Serializable;
 public class CalcDTO implements Serializable{	//직렬화
 	private int num1, num2, sum;
 	
+<<<<<<< HEAD
 	public CalcDTO() {}
+=======
+	public CalcDTO() {
+		
+	}
+>>>>>>> JHU
 
 	public CalcDTO(int num1, int num2, int sum) {
 		super();

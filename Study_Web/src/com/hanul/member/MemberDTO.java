@@ -1,29 +1,30 @@
 package com.hanul.member;
+package com.hanul.study;
 
-import java.io.Serializable;
-
-public class MemberDTO implements Serializable{//객체의 직렬화 : 멤버변수들을 바이트 코드로 변환 
-	//1. 멤버변수 선어
+public class MemberDTO {
+	//1. 멤버변수(필드) 선언
 	private String name;
 	private String id;
-	private String pw;
-	private int	age;
+	private	String pw;
+	private int age;
 	private String addr;
+	private String tel;
 	
-	//2. 디폴트 생성자 메소드
+	//2. 디폴트 생성자 메소드(빈깡통)
 	public MemberDTO() {}
-	
-	//3. 생성자 메소드 초기화
-	public MemberDTO(String name, String id, String pw, int age, String addr) {
+
+	//3.생성자 메소드 초기화
+	public MemberDTO(String name, String id, String pw, int age, String addr, String tel) {
 		super();
 		this.name = name;
 		this.id = id;
 		this.pw = pw;
 		this.age = age;
 		this.addr = addr;
+		this.tel = tel;
 	}
 	
-	//4.Geteer & Setters 메소드
+	//4. Getters & Setters 메소드
 	public String getName() {
 		return name;
 	}
@@ -63,7 +64,14 @@ public class MemberDTO implements Serializable{//객체의 직렬화 : 멤버변
 	public void setAddr(String addr) {
 		this.addr = addr;
 	}
-	
+
+	public String getTel() {
+		return tel;
+	}
+
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
 	
 	
 	
