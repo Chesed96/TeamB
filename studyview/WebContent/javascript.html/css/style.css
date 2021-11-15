@@ -1,6 +1,0 @@
-@charset "UTF-8";
-div#displayArea { /* 종속선택자 */
-	width: 200px;
-	height: 200px;
-	border: 5px double #6699FF;
-}
