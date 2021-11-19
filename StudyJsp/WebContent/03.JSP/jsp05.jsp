@@ -27,7 +27,7 @@ dao.insertMember(dto);
 <% request.setCharacterEncoding("utf-8");	//인코딩 설정 %>
 
 <jsp:useBean id="dto" class="com.hanul.study.MemberDTO">
-<%-- 	<jsp:setProperty property="name" name="dto"/>
+	<%-- <jsp:setProperty property="name" name="dto"/>
 	<jsp:setProperty property="id" name="dto"/>
 	<jsp:setProperty property="pw" name="dto"/>
 	<jsp:setProperty property="age" name="dto"/>
@@ -41,10 +41,10 @@ dao.insertMember(dto);
 <%
 int succ = dao.insertMember(dto);
 if(succ > 0){
-	out.println("<script>alert('회원가입 성공!!');");
+	out.println("<script>alert('회원가입 성공!');");
 	out.println("location.href='jsp05Main.html';</script>");
 }else{
-	out.println("<script>alert('회원가입 실패ㅜㅠ');");
+	out.println("<script>alert('회원가입 실패!');");
 	out.println("location.href='jsp05Main.html';</script>");
 }
 %>
